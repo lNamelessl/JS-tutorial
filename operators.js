@@ -1,6 +1,7 @@
 // + - * / ** %
 
 let students = 30;
+const PI = "3.14"
 
 console.log(students + 1);
 console.log(students -1 );
@@ -12,4 +13,9 @@ students++;
 
 console.log(students -= 1);
 
-
+if(PI === "3.14"){
+    console.log("It is equal to pi") //Checks for both value and data type
+} 
+if(PI !== 3.14){
+    console.log("It is not equal to pi")
+}
