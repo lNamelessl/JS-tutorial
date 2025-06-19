@@ -11,3 +11,4 @@ mySubmit.onclick = function(){
         subResult.textContent = `You are not subscribed`
     }
 }
+
