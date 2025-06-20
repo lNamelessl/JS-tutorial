@@ -5,4 +5,4 @@ function isValidEmail(email){
     return email.includes("@") ? true : false;
 }   
 
-console.log(isValidEmail(email));
+console.log(isValidEmail(email)); 
