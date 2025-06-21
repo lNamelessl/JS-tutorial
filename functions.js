@@ -1,5 +1,20 @@
-// filter
 let numbers = [10, 11, 12, 17, 18, 20, 22]
+
+// Arrow fucntions
+const evenNums = numbers.filter((element) => element % 2 === 0);
+console.log(evenNums);
+
+// funcition expresssions
+
+
+minorAges = numbers.filter(function(element){
+    return element < 18
+});
+console.log(minorAges);
+
+
+
+// filter
 adultAges = numbers.filter(isAdult);
 console.log(adultAges);
 
