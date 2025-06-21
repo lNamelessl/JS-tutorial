@@ -1,3 +1,11 @@
+// objects
+person1 = {
+    "firstName": "Spongebob",
+    "lastName": "Squarepants",
+    "sayHello": function(){console.log(`Hello my name is ${this.firstName} ${this.lastName}`)}
+};
+person1.sayHello();
+
 let numbers = [10, 11, 12, 17, 18, 20, 22]
 
 // Arrow fucntions
