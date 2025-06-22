@@ -14,6 +14,9 @@ class Vehicle{
 
 // Inheritance
 class newVehicle extends Vehicle{
+    constructor(model){
+    super(model);
+    this.model = "CyberTruck"}
 
 }
 car3 = new newVehicle("Tesla", "Model X", "2022")
