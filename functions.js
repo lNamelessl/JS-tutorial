@@ -1,3 +1,14 @@
+// constructors
+function Car(make, model, year){
+    this.make = make,
+    this.model = model,
+    this.year = year,
+    this.drive = function(){console.log(`you drive ${this.make} of model ${this.model} of year ${this.year}`)}
+
+}
+car1 = new Car("Mercedez", "Benz", "2024")
+console.log(car1.drive())
+
 // objects
 person1 = {
     "firstName": "Spongebob",
@@ -76,4 +87,5 @@ function formatDates(element){
     const parts = element.split("-");
     return `${parts[1]}/${parts[2]}/${parts[0]}`
 }
+
 
