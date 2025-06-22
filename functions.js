@@ -1,5 +1,6 @@
 // classes
 class Vehicle{
+    static price = 1000;
     constructor(make, model, year){
         this.make = make,
         this.model = model,
@@ -9,8 +10,9 @@ class Vehicle{
         console.log(`You drive ${this.make} of model ${this.model} of year ${this.year}`)
     }
 }
-car2 = new Vehicle("mercedez", "Benz", "2025")
-console.log(car2.drive())
+car2 = new Vehicle("mercedez", "Benz", "2025");
+console.log(car2.drive());
+console.log(Vehicle.price);
 
 // constructors
 function Car(make, model, year){
