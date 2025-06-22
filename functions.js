@@ -1,3 +1,4 @@
+
 // classes
 class Vehicle{
     static price = 1000;
@@ -10,8 +11,18 @@ class Vehicle{
         console.log(`You drive ${this.make} of model ${this.model} of year ${this.year}`)
     }
 }
+
+// Inheritance
+class newVehicle extends Vehicle{
+
+}
+car3 = new newVehicle("Tesla", "Model X", "2022")
+car3.drive()
+
+
 car2 = new Vehicle("mercedez", "Benz", "2025");
-console.log(car2.drive());
+car2.drive();
+
 console.log(Vehicle.price);
 
 // constructors
