@@ -1,22 +1,36 @@
 
 // classes
-class Vehicle{
+class Vehicle {
     static price = 1000;
-    constructor(make, model, year){
+    constructor(make, model, year) {
         this.make = make,
-        this.model = model,
-        this.year = year
+            this.model = model,
+            this.year = year
     }
-    drive(){
+    drive() {
         console.log(`You drive ${this.make} of model ${this.model} of year ${this.year}`)
+    }
+
+    set model(newModel) {
+        if (typeof newModel === "string") {
+            this._model = newModel;
+        }
+        else {
+            console.log(`model must be a string`)
+        }
+
+    }
+    get model() {
+        return this._model;
     }
 }
 
 // Inheritance
-class newVehicle extends Vehicle{
-    constructor(model){
-    super(model);
-    this.model = "CyberTruck"}
+class newVehicle extends Vehicle {
+    constructor(model) {
+        super(model);
+        this.model = "CyberTruck"
+    }
 
 }
 car3 = new newVehicle("Tesla", "Model X", "2022")
@@ -29,11 +43,11 @@ car2.drive();
 console.log(Vehicle.price);
 
 // constructors
-function Car(make, model, year){
+function Car(make, model, year) {
     this.make = make,
-    this.model = model,
-    this.year = year,
-    this.drive = function(){console.log(`you drive ${this.make} of model ${this.model} of year ${this.year}`)}
+        this.model = model,
+        this.year = year,
+        this.drive = function () { console.log(`you drive ${this.make} of model ${this.model} of year ${this.year}`) }
 
 }
 car1 = new Car("Mercedez", "Benz", "2024")
@@ -43,7 +57,7 @@ console.log(car1.drive())
 person1 = {
     "firstName": "Spongebob",
     "lastName": "Squarepants",
-    "sayHello": function(){console.log(`Hello my name is ${this.firstName} ${this.lastName}`)}
+    "sayHello": function () { console.log(`Hello my name is ${this.firstName} ${this.lastName}`) }
 };
 person1.sayHello();
 
@@ -56,7 +70,7 @@ console.log(evenNums);
 // funcition expresssions
 
 
-minorAges = numbers.filter(function(element){
+minorAges = numbers.filter(function (element) {
     return element < 18
 });
 console.log(minorAges);
@@ -67,8 +81,8 @@ console.log(minorAges);
 adultAges = numbers.filter(isAdult);
 console.log(adultAges);
 
-function isAdult(element){
-    return element >= 18 ;
+function isAdult(element) {
+    return element >= 18;
 }
 
 // functions
@@ -76,19 +90,19 @@ let email = "fakefakemail.com"
 const myH1 = document.getElementById("myH1");
 
 
-function isValidEmail(email){
+function isValidEmail(email) {
     return email.includes("@") ? true : false;
-}   
+}
 
-console.log(isValidEmail(email)); 
+console.log(isValidEmail(email));
 
 
 // callbacks
-function hello(){
+function hello() {
     console.log(`Hello`)
 }
 
-function goodbye(){
+function goodbye() {
     console.log(`Goodbye`)
 }
 
@@ -100,11 +114,11 @@ fruits.forEach(capitalize);
 fruits.forEach(display);
 
 
-function capitalize(element, index, array){
+function capitalize(element, index, array) {
     array[index] = element.charAt(0).toUpperCase() + element.slice(1)
 }
 
-function display(element){
+function display(element) {
     console.log(element)
 }
 
@@ -113,7 +127,7 @@ const dates = ["2025-6-6", "2025-4-4", "2025-8-9"];
 let formattedDates = dates.map(formatDates);
 console.log(formattedDates);
 
-function formatDates(element){
+function formatDates(element) {
     const parts = element.split("-");
     return `${parts[1]}/${parts[2]}/${parts[0]}`
 }
