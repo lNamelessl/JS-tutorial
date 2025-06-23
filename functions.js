@@ -60,8 +60,29 @@ console.log(car1.drive())
 person1 = {
     "firstName": "Spongebob",
     "lastName": "Squarepants",
-    "sayHello": function () { console.log(`Hello my name is ${this.firstName} ${this.lastName}`) }
+    "sayHello": function () { console.log(`Hello my name is ${this.firstName} ${this.lastName}`)}
+    
 };
+class Person{
+    constructor(name, age, ...address){
+        this.name = name;
+        this.age = age;
+        this.address = new Address(...address)
+    }
+}
+
+
+class Address{
+    constructor(street, city, country){
+        this.street = street;
+        this.city = city;
+        this.country = country;
+
+    }
+}
+const person2 = new Person("Spongebob", "30", "124 Conch St., Bikini Bottom, Ocean");
+console.log(person2);
+
 person1.sayHello();
 
 let numbers = [10, 11, 12, 17, 18, 20, 22]
