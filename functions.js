@@ -1,4 +1,3 @@
-
 // classes
 class Vehicle {
     static price = 1000;
@@ -34,9 +33,13 @@ class newVehicle extends Vehicle {
 
 }
 car3 = new newVehicle("Tesla", "Model X", "2022")
+
+// deconstructing
+const {model, make} = car3;
+console.log(model)
+console.log(make)
+
 car3.drive()
-
-
 car2 = new Vehicle("mercedez", "Benz", "2025");
 car2.drive();
 
