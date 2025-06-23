@@ -1,5 +1,12 @@
-// ES6 modules
-
+try{
+    console.log("Hello")
+}
+catch(error){
+    console.error(error)
+}
+finally{
+    console.log("Goodbye")
+}
 
 
 // Datetime
