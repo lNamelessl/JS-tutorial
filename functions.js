@@ -1,3 +1,12 @@
+// ES6 modules
+
+
+
+// Datetime
+const date = new Date(0)
+console.log(date)
+
+
 // classes
 class Vehicle {
     static price = 1000;
