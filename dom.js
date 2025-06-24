@@ -1,4 +1,7 @@
 const beets = document.getElementById("beets");
+beets.addEventListener("click", listener => {
+    beets.style.backgroundColor = "tomato";
+})
 beets.style.backgroundColor = "yellow";
 
 const fruits = document.getElementsByClassName("fruits");
