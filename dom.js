@@ -15,6 +15,14 @@ nRoots.forEach(nRoot => {
     nRoot.style.backgroundColor = "orange"
 })
 
-
 const sibling = beets.previousElementSibling
 sibling.style.backgroundColor = "azure"
+
+const newElement = document.createElement("h2");
+newElement.textContent = "Food R Us 🍣";
+document.getElementById("myh1").prepend(newElement);
+
+
+const newFooter = document.createElement("footer");
+newFooter.textContent = "🍴";
+document.getElementById("myh4").append(newFooter);
